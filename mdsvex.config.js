@@ -8,7 +8,7 @@ import rehypeExternalLinks from 'rehype-external-links';
 
 export default defineConfig({
 	extensions: ['.md', '.svx'],
-	layout: './src/components/organizations/ArticleLayout.svelte',
+	layout: './src/components/organizations/NewsLayout.svelte',
 	remarkPlugins: [
 		[
 			remarkGithub,

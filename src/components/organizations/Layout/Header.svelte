@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import Button from '@/src/components/atoms/Button.svelte';
 	import config from '$lib/config.json';
 
 	const gotoContact = () => {
@@ -15,19 +14,19 @@
 		};
 
 	const routeList = [
+		{ title: 'TOP', path: '/' },
 		{ title: '東京大会概要', path: '/about/game' },
-		{ title: 'エントリー', onClick: gotoEntry },
+		{ title: '参加エントリー', onClick: gotoEntry },
 		{ title: 'お問い合わせ', onClick: gotoContact }
 	];
 </script>
 
 <header class="py-5 px-28 shadow-md bg-black text-white">
-	<div class="flex-grow text-xl font-medium" on:click={() => goto('/')}>
-		{config.project.name}
-	</div>
-	<div class="flex space-x-5">
+	<img src="/icon/TR-TOKYO-LOGO-W.png" alt="logo" class="mx-auto mb-1" on:click={() => goto('/')} />
+	<div class="flex justify-center space-x-7">
 		{#each routeList as route}
-			<Button
+			<div
+				class="py-3 font-semibold"
 				on:click={() => {
 					if (route.onClick) {
 						return route.onClick();
@@ -36,7 +35,7 @@
 				}}
 			>
 				{route.title}
-			</Button>
+			</div>
 		{/each}
 	</div>
 </header>
