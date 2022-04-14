@@ -1,5 +1,5 @@
 <script lang="ts">
-	import {page} from '$app/stores'
+	import { page } from '$app/stores';
 	import Layout from '@/src/components/organizations/Layout/index.svelte';
 	import { MetaTags } from 'svelte-meta-tags';
 	import '@/src/styles/app.css';

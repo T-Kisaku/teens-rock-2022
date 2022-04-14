@@ -19,6 +19,8 @@
 		{ title: '参加エントリー', onClick: gotoEntry },
 		{ title: 'お問い合わせ', onClick: gotoContact }
 	];
+
+	let open = false
 </script>
 
 <header class="py-5 px-28 shadow-md bg-black text-white">
@@ -26,7 +28,7 @@
 	<div class="flex justify-center space-x-7">
 		{#each routeList as route}
 			<div
-				class="py-3 font-semibold"
+				class="py-3 font-semibold hidden md:inline-block"
 				on:click={() => {
 					if (route.onClick) {
 						return route.onClick();

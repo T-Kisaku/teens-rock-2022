@@ -5,7 +5,6 @@
 
 	export let title;
 	export let publishedDate;
-
 </script>
 
 <Title class="text-2xl mt-20">{title}</Title>

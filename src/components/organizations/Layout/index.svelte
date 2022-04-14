@@ -3,9 +3,9 @@
 	import Main from './Main.svelte';
 	import Footer from './Footer.svelte';
 
-	export let topPadding: boolean = true
+	export let topPadding: boolean = true;
 </script>
 
 <Header />
-<Main topPadding={topPadding}><slot /></Main>
+<Main {topPadding}><slot /></Main>
 <Footer />
