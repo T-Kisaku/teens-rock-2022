@@ -4,23 +4,28 @@
 	import config from '$lib/config.json';
 
 	const gotoContact = () => {
-		if (window) {
-			window.open(config.company.contact_form_URL, '_blank');
-		}
-	};
+			if (window) {
+				window.open(config.project.form.contact, '_blank');
+			}
+		},
+		gotoEntry = () => {
+			if (window) {
+				window.open(config.project.form.entry, '_blank');
+			}
+		};
 
 	const routeList = [
-		{ title: '会社概要', path: '/about/company' },
-		{ title: 'メンバー', path: '/about/members' },
+		{ title: '東京大会概要', path: '/about/game' },
+		{ title: 'エントリー', onClick: gotoEntry },
 		{ title: 'お問い合わせ', onClick: gotoContact }
 	];
 </script>
 
-<header class="flex items-center w-full h-header-heigh py-5 px-28 shadow-md bg-white">
+<header class="py-5 px-28 shadow-md bg-black text-white">
 	<div class="flex-grow text-xl font-medium" on:click={() => goto('/')}>
 		{config.project.name}
 	</div>
-	<div class="flex space-x-5 hidden md:inline-block">
+	<div class="flex space-x-5">
 		{#each routeList as route}
 			<Button
 				on:click={() => {

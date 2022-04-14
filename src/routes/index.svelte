@@ -1,4 +1,4 @@
-<script context="module" lang="ts">
+<!-- <script context="module" lang="ts">
 	import type { Load } from '@sveltejs/kit';
 	import type { Ivent } from '@/src/types/markdown';
 
@@ -14,7 +14,7 @@
 		// 	status: 404
 		// };
 	};
-</script>
+</script> -->
 
 <script lang="ts">
 	import { MetaTags } from 'svelte-meta-tags';
@@ -31,44 +31,16 @@
 	import IventCard from '@/src/components/atoms/IventCard.svelte';
 	import Title from '../components/atoms/Title.svelte';
 
-	export let data: Ivent[];
+	// export let data: Ivent[];
 </script>
 
 <MetaTags title="Home" />
 
-<Swiper
-	effect={'coverflow'}
-	grabCursor={true}
-	loop={true}
-	centeredSlides={true}
-	slidesPerView={'auto'}
-	coverflowEffect={{
-		rotate: 50,
-		stretch: 0,
-		depth: 100,
-		modifier: 1,
-		slideShadows: true
-	}}
-	pagination={true}
-	modules={[EffectCoverflow, Pagination]}
-	class="mySwiper"
->
-	{#each data as ivent}
-		<SwiperSlide>
-			<img
-				src={ivent.metadata.imageURL}
-				alt={ivent.metadata.title}
-				on:click={() => goto(ivent.url)}
-			/>
-		</SwiperSlide>
-	{/each}
-</Swiper>
-
-<div class="mx-20">
+<!-- <div class="mx-20">
 	<Title>IVENT</Title>
 	<div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
 		{#each data as ivent}
 			<IventCard {ivent} />
 		{/each}
 	</div>
-</div>
+</div> -->

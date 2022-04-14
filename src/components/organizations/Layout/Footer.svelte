@@ -4,7 +4,7 @@
 
 	const gotoContact = () => {
 		if (window) {
-			window.open(config.company.contact_form_URL, '_blank');
+			window.open(config.project.form.contact, '_blank');
 		}
 	};
 </script>
@@ -15,9 +15,9 @@
 		<Button type="contain" on:click={gotoContact}>お問い合わせ</Button>
 	</div>
 	<div class="h-full flex flex-col justify-between bg-black text-white px-20 pt-10">
-		<div class="text-2xl">{config.company.name}</div>
+		<div class="text-2xl">{config.project.name}</div>
 		<div class="border-t border-white text-center text-sm py-3">
-			Copyright © 2021 {config.company.name} lcc. All rights reserved.
+			Copyright © 2021 {config.project.name} lcc. All rights reserved.
 		</div>
 	</div>
 </footer>
