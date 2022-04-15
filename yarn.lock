@@ -3291,6 +3291,11 @@ svelte-check@^2.2.6:
     svelte-preprocess "^4.0.0"
     typescript "*"
 
+svelte-drawer-component@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/svelte-drawer-component/-/svelte-drawer-component-1.2.2.tgz#33151fd6c68af29175f2885d09b6f7ca13888e3a"
+  integrity sha512-FyVaqwydJZfO266ERLbSsn9WojXwC5Mhc2pTOoZPTHcYopCdnINw+vKPuDnb/2osLEbDNnCE/2+MSgJsR9r56Q==
+
 svelte-hmr@^0.14.9:
   version "0.14.10"
   resolved "https://registry.yarnpkg.com/svelte-hmr/-/svelte-hmr-0.14.10.tgz#eb383c7e8791e81ccc64958847908eb88a6aee08"

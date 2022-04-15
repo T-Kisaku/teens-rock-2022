@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import config from '$lib/config.json';
+	import Drawer from 'svelte-drawer-component';
+
 
 	const gotoContact = () => {
 			if (window) {
@@ -24,7 +26,15 @@
 </script>
 
 <header class="py-5 px-28 shadow-md bg-black text-white">
-	<img src="/icon/TR-TOKYO-LOGO-W.png" alt="logo" class="mx-auto mb-1" on:click={() => goto('/')} />
+	<div>
+		<img
+			src="/icon/menu.svg"
+			alt="menu"
+			class="absolute left-1 sm:hidden ml-3"
+			on:click={() => open = true}
+		>
+		<img src="/icon/TR-TOKYO-LOGO-W.png" alt="logo" class="mx-auto mb-1 flex-grow" on:click={() => goto('/')} />
+	</div>
 	<div class="flex justify-center space-x-7">
 		{#each routeList as route}
 			<div
@@ -41,3 +51,22 @@
 		{/each}
 	</div>
 </header>
+<Drawer { open } size='200px' on:clickAway={() => open = false}>
+	<div class="h-full w-full bg-black text-white p-5">
+		<img src="/icon/TR-TOKYO-LOGO-W.png" alt="logo" class="mx-auto mb-1 flex-grow" on:click={() => goto('/')} />
+		{#each routeList as route}
+			<div
+				class="py-3 font-semibold"
+				on:click={() => {
+					if (route.onClick) {
+						return route.onClick();
+					}
+					return goto(route.path);
+				}}
+			>
+				{route.title}
+			</div>
+		{/each}
+		<div class="text-center font-semibold mt-10" on:click={() => open = false}>閉じる</div>
+	</div>
+</Drawer>
