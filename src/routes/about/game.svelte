@@ -51,13 +51,11 @@
 		<p>【住所】東京都渋谷区宇田川町4-7 トウセン宇田川町ビル５F</p>
 		<iframe
 			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.5878047651017!2d139.69568951520006!3d35.662525938605064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca93bcdba17%3A0x50a675c4a058b9a2!2z44CSMTUwLTAwNDIgVG9reW8sIFNoaWJ1eWEgQ2l0eSwgVWRhZ2F3YWNoxY0sIDTiiJI3IOODiOOCpuOCu-ODs-Wuh-eUsOW3neeUuuODk-ODqyA1Zg!5e0!3m2!1sen!2sjp!4v1650368214845!5m2!1sen!2sjp"
-			width="600"
-			height="450"
 			style="border:0;"
 			allowfullscreen=""
 			loading="lazy"
 			referrerpolicy="no-referrer-when-downgrade"
-			class="mx-auto"
+			class="mx-auto h-96 w-full"
 		></iframe>
 		<CheckTitle>大会までの主なスケジュール</CheckTitle>
 		<div class="font-bold">
