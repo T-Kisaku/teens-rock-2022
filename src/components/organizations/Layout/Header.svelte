@@ -25,12 +25,12 @@
 	let open = false
 </script>
 
-<header class="py-5 px-28 shadow-md bg-black text-white">
-	<div>
+<header class="left-0 top-0 fixed w-full py-5 px-28 shadow-md bg-black text-white">
+	<div class=''>
 		<img
 			src="/icon/menu.svg"
 			alt="menu"
-			class="absolute left-1 sm:hidden ml-3"
+			class="absolute left-1 top-1/2 -translate-y-1/2 md:hidden ml-3"
 			on:click={() => open = true}
 		>
 		<img src="/icon/TR-TOKYO-LOGO-W.png" alt="logo" class="mx-auto mb-1 flex-grow" on:click={() => goto('/')} />
@@ -38,7 +38,7 @@
 	<div class="flex justify-center space-x-7">
 		{#each routeList as route}
 			<div
-				class="py-3 font-semibold hidden md:inline-block"
+				class="py-3 font-semibold cursor-wait hidden md:inline-block"
 				on:click={() => {
 					if (route.onClick) {
 						return route.onClick();
@@ -56,7 +56,7 @@
 		<img src="/icon/TR-TOKYO-LOGO-W.png" alt="logo" class="mx-auto mb-1 flex-grow" on:click={() => goto('/')} />
 		{#each routeList as route}
 			<div
-				class="py-3 font-semibold"
+				class="py-3 font-semibold cursor-wait"
 				on:click={() => {
 					if (route.onClick) {
 						return route.onClick();

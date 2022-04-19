@@ -22,12 +22,15 @@
 	import 'swiper/css/pagination';
 	import '@/src/styles/slide.coverflow.css';
 
+	import Container from '../components/organizations/Container.svelte';
 	import Paper from '../components/atoms/Paper.svelte';
 	export let data: News[];
 </script>
 
 <MetaTags title="Home" />
-<img src="/image/home.png" alt="home" />
+
+<Container variant="bottom">
+	<img src="/image/home.png" alt="home" />
 
 <Paper class="py-5 px-7">
 	<div class="bg-black text-white p-5">お知らせ</div>
@@ -43,4 +46,5 @@
 		{/each}
 	</div>
 </Paper>
-<div />
+
+</Container>

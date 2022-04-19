@@ -1,10 +1,9 @@
 <script lang="ts">
-	import { page } from '$app/stores';
 	import Layout from '@/src/components/organizations/Layout/index.svelte';
 	import { MetaTags } from 'svelte-meta-tags';
-	import '@/src/styles/app.css';
-
 	import config from '$lib/config.json';
+
+	import '@/src/styles/app.scss';
 </script>
 
 <MetaTags
@@ -29,6 +28,6 @@
 	}}
 />
 
-<Layout topPadding={$page.url.pathname !== '/'}>
+<Layout>
 	<slot />
 </Layout>
