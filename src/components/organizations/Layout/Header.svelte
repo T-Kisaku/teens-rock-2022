@@ -33,12 +33,12 @@
 			class="absolute left-1 top-1/2 -translate-y-1/2 md:hidden ml-3"
 			on:click={() => open = true}
 		>
-		<img src="/icon/TR-TOKYO-LOGO-W.png" alt="logo" class="mx-auto mb-1 flex-grow" on:click={() => goto('/')} />
+		<img src="/icon/TR-TOKYO-LOGO-W.png" alt="logo" class="mx-auto mb-1 flex-grow cursor-pointer" on:click={() => goto('/')} />
 	</div>
 	<div class="flex justify-center space-x-7">
 		{#each routeList as route}
 			<div
-				class="py-3 font-semibold cursor-wait hidden md:inline-block"
+				class="py-3 font-semibold cursor-pointer hidden md:inline-block"
 				on:click={() => {
 					if (route.onClick) {
 						return route.onClick();
@@ -56,7 +56,7 @@
 		<img src="/icon/TR-TOKYO-LOGO-W.png" alt="logo" class="mx-auto mb-1 flex-grow" on:click={() => goto('/')} />
 		{#each routeList as route}
 			<div
-				class="py-3 font-semibold cursor-wait"
+				class="py-3 font-semibold cursor-pointer"
 				on:click={() => {
 					if (route.onClick) {
 						return route.onClick();
